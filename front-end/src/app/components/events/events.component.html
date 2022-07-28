@@ -1,0 +1,36 @@
+
+<body class="body">
+    
+    <div class="amateur">
+       <app-amateur-details></app-amateur-details>
+       <p>Id del evento solicitado:</p>
+       <h1>{{ eventClicId }}</h1>
+    
+    <form class="comment">  
+       <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Deja un comentario del evento</mat-label>
+        <textarea matInput placeholder="Saturno se veía precioso!.."></textarea>
+      </mat-form-field>
+    </form>
+
+    </div>
+
+    <div class="events">
+
+        <h4>En esta sección podrás encontrar la información de todos los eventos astronómicos visibles desde España. Apúntate y vive la experiencia de observarlos en grupo y hacer del universo una experiencia inolvidable.</h4>
+    <div class="message">
+        <h2>*EVENTS*</h2>
+    </div>
+    
+    <div class="box" *ngFor = "let event of events">
+        <img [src]="event.photo" alt="event">
+            <h1>{{ event.id }} - {{ event.eventName }}</h1>
+            <h3>{{ event.date }}</h3>
+            <h3>{{ event.location }}</h3>
+            <h3>{{ event.description }}</h3>
+            <button class="button" [ngStyle]="{'background-color':backgroundColor, 'color': color}" (mouseover)="overBox()" (mouseout)="overBox()" (click)="participation(event.id)">Participar</button>
+
+    </div>
+    </div>
+
+</body>

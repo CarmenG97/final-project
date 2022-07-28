@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    font-size: 84px;
+    text-align: center;
+    background-color: #d39be9;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 170px;
+
+}
+
+.title {
+    color: rgb(255, 255, 255);;
+    margin-top: 5%;
+    margin-left: 25%;   
+}
+
+.logo {
+    max-width: 155px;
+    margin-left: 8%;
+}
+
+.router-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+p{
+    font-size: medium;
+    margin-left: 13%;
+}

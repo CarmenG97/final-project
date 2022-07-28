@@ -1,0 +1,28 @@
+h1 {
+    font-size: 40px;
+    color: #999;
+    margin-top: 40px;
+    margin-left: 18%;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 18px;
+    color: #999;
+    width: 65%;
+    text-align: left;
+    margin-top: 6px;
+     margin-left: 18%;
+    /* margin-right: 10%;  */
+    line-height: 35px;
+}
+
+.first_image {
+     margin-left: 38%; 
+}
+
+.second_image {
+    width: 450px;
+    margin-left: 35%;
+
+}

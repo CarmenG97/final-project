@@ -1,0 +1,28 @@
+<button class="back" type="button" [routerLink]="['/constellations/', selectedStar?.constellationId]">BACK</button>
+
+<div class="card">
+    <span>
+        <img [src]="selectedStar?.image" alt=" " width="340" height="340">
+    </span>
+
+    <div class="info">
+            <h1>*{{ selectedStar?.starName }}*</h1> <br>
+                            
+            <p>SAO - {{ selectedStar?.sao }}.</p>
+            <p>Estrella {{ selectedStar?.starDesignation}}.</p> 
+
+            <p>magnitud aparente: {{ selectedStar?.appMagnitude }}</p>
+            <p>magnitud absoluta: {{ selectedStar?.absMagnitude }}.</p>  
+            <p>espectro: {{ selectedStar?.spectrum }}</p> 
+            <p>color(B-V): {{ selectedStar?.colour }}</p>
+            <p>ascensión recta: {{ selectedStar?.rightAscension }} h</p>
+            <p>declinación: {{ selectedStar?.declination }}º</p>
+            <p>distancia: {{ selectedStar?.distance }} años luz</p>
+
+        </div>
+
+    <span class="navigation">
+        <button class="previous-page" type="button" (click)="previousPage()"></button>
+    </span>
+</div>
+

@@ -1,0 +1,32 @@
+<button class="back" type="button" [routerLink]="['/constellations']">BACK</button>
+
+<div class="card">
+    <span>
+        <img [src]="selectedConstellation?.secondProfilePicture" alt="{{ selectedConstellation?.constellationName }}" width="340" height="340">
+    </span>
+
+    <div class="info">
+        <h1>{{ selectedConstellation?.id }} - {{ selectedConstellation?.constellationName }}</h1>
+            <h2>Estrella alfa: {{ selectedConstellation?.alphaStarName }}</h2> 
+            <p>*Estrella más brillante de la constelación*</p>
+            <br>
+            <h2>Estrellas:</h2>
+
+            <div class="stars">
+            <ul>
+                <li *ngFor="let star of selectedConstellation?.starCuriousDTOList">
+                   <a [routerLink]="['/stars/', star.sao ]"> {{ star.starName }} ({{ star.starDesignation}}) - {{ star.sao}} </a> <br>
+
+                   &nbsp;
+                </li>                    
+            </ul>
+            </div>
+            <h3>{{ selectedConstellation?.history }}</h3>
+            
+    </div>
+
+    <span class="navigation">
+        <button class="previous-page" type="button" (click)="previousPage()"></button>
+        <button class="next-page" type="button" (click)="nextPage()"></button>
+    </span>
+</div>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-service" />
+        <module name="amateur-proxy-service" />
+        <module name="edge-service" />
+        <module name="event-proxy-service" />
+        <module name="star-proxy-service" />
+        <module name="coordinate-proxy-service" />
+        <module name="constellation-proxy-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="amateur-proxy-service" target="17" />
+      <module name="constellation-proxy-service" target="17" />
+      <module name="coordinate-proxy-service" target="17" />
+      <module name="edge-service" target="17" />
+      <module name="eureka-service" target="17" />
+      <module name="event-proxy-service" target="17" />
+      <module name="Events" target="17" />
+      <module name="star-proxy-service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Events" options="-parameters" />
+      <module name="amateur-proxy-service" options="-parameters" />
+      <module name="constellation-proxy-service" options="-parameters" />
+      <module name="coordinate-proxy-service" options="-parameters" />
+      <module name="edge-service" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
+      <module name="event-proxy-service" options="-parameters" />
+      <module name="star-proxy-service" options="-parameters" />
+    </option>
+  </component>
+</project>

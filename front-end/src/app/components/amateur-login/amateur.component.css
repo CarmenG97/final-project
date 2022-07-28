@@ -1,0 +1,46 @@
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(236, 123, 142)
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+   
+}
+
+.sub-container{
+    width: 100%;
+    padding: 5px;
+}
+
+.sub-container-button{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.amateurs {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+    padding-left: 160px;
+    padding-top: 30px;
+    border: 1px solid lightgray;
+}
+
+.amateurs:hover {
+    box-shadow: 0px 0px 20px lightgray;
+}
+
+.routerLink {
+    text-decoration: none;
+    color: black;
+}
+

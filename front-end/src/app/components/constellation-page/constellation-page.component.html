@@ -1,0 +1,16 @@
+<body class="body">
+<div class="message">
+    <h2>*Selecciona tu constelación*</h2>
+</div>
+
+<div class="grid">
+    <div class="box" *ngFor = "let constellation of constellations">
+        <h3>{{ constellation.constellationName }}</h3>
+
+        <a [routerLink]="['/constellations', constellation.id]">
+          <img [src]="constellation.profilePicture" alt="constellation">
+        </a>
+
+    </div>
+</div>
+</body>
