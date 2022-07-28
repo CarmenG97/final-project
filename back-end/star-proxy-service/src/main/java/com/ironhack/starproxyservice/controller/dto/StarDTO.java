@@ -19,6 +19,7 @@ public class StarDTO {
     private double declination;
     private BigDecimal distance;
 
+
     public StarDTO() {
     }
 
@@ -141,4 +142,5 @@ public class StarDTO {
     public void setConstellationId(long constellationId) {
         this.constellationId = constellationId;
     }
+
 }

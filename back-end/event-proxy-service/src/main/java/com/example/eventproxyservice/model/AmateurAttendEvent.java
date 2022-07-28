@@ -8,6 +8,8 @@ public class AmateurAttendEvent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long amateurId;
+
+//    @OneToOne
     private long eventId;
 
     public AmateurAttendEvent() {

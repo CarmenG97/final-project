@@ -13,11 +13,12 @@ public class StarCuriousDTO {
     private String colour;
     private String image;
     private BigDecimal distance;
+    private String explanation;
 
     public StarCuriousDTO() {
     }
 
-    public StarCuriousDTO(long SAO, String starName, String starDesignation, String constellation, long constellationId, double brightness, String type, String colour, String image, BigDecimal distance) {
+    public StarCuriousDTO(long SAO, String starName, String starDesignation, String constellation, long constellationId, double brightness, String type, String colour, String image, BigDecimal distance, String explanation) {
         this.SAO = SAO;
         this.starName = starName;
         this.starDesignation = starDesignation;
@@ -28,6 +29,7 @@ public class StarCuriousDTO {
         this.colour = colour;
         this.distance = distance;
         this.image = image;
+        this.explanation = explanation;
     }
 
     public long getSAO() {
@@ -105,8 +107,15 @@ public class StarCuriousDTO {
     public long getConstellationId() {
         return constellationId;
     }
-
     public void setConstellationId(long constellationId) {
         this.constellationId = constellationId;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
     }
 }

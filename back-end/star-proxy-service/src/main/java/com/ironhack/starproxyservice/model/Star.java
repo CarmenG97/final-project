@@ -117,4 +117,6 @@ public class Star {
     public void setConstellationId(long constellationId) {
         this.constellationId = constellationId;
     }
+
+
 }

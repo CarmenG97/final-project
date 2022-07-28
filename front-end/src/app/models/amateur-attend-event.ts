@@ -2,8 +2,8 @@ export class AmateurAttentEvent {
     constructor(
         private _id: number | null,
         private _amateurId: number,
-        private _eventId: number,
-    ){}
+        private _eventId: number, //private _eventList: Event[],
+    ) { }
 
     public get eventId(): number {
         return this._eventId;

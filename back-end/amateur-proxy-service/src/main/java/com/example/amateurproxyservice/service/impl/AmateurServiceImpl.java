@@ -64,8 +64,6 @@ public class AmateurServiceImpl implements AmateurService {
         amateurDTO.setPassword(amateur.getPassword());
         amateurDTO.setPhoto(amateur.getPhoto());
 
-    //    amateurDTO.setRoles(amateur.getRoles().stream().map(this::roleToDTO).collect(Collectors.toSet()));
-
         return amateurDTO;
     }
 

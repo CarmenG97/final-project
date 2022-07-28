@@ -3,9 +3,16 @@
     
     <div class="amateur">
        <app-amateur-details></app-amateur-details>
-       <p>Id del evento solicitado:</p>
-       <h1>{{ eventClicId }}</h1>
-    
+       <p>Eventos apuntados:</p>
+       <div style="display: flex" *ngFor= "let event of eventList">
+       <h1>{{ event.id }}</h1> <h3> - {{ event.eventName }}</h3>
+       </div>
+         
+       <div *ngIf = eventList.length === 3>
+        <h1>PREMIUM</h1>
+       </div> 
+
+
     <form class="comment">  
        <mat-form-field class="full-width" appearance="fill">
         <mat-label>Deja un comentario del evento</mat-label>
@@ -28,7 +35,7 @@
             <h3>{{ event.date }}</h3>
             <h3>{{ event.location }}</h3>
             <h3>{{ event.description }}</h3>
-            <button class="button" [ngStyle]="{'background-color':backgroundColor, 'color': color}" (mouseover)="overBox()" (mouseout)="overBox()" (click)="participation(event.id)">Participar</button>
+            <button class="button" [ngStyle]="{'background-color':backgroundColor, 'color': color}" (mouseover)="overBox()" (mouseout)="overBox()" (click)="participation(event)">Participar</button>
 
     </div>
     </div>

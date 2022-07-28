@@ -49,6 +49,7 @@ public class StarServiceImpl implements StarService {
                     starCoordinatesList.get(i).getDeclination(),
                     starCoordinatesList.get(i).getDistance());
 
+
             starDTOList.add(starDTO);
 
         }
@@ -81,7 +82,7 @@ public class StarServiceImpl implements StarService {
                     type = "Estrella subgigante";
                     break;
                 case 5:
-                    type = "Estrella enana (S.P.)";
+                    type = "Estrella enana";
                     break;
                 case 6:
                     type = "Estrella subenana";
@@ -110,6 +111,16 @@ public class StarServiceImpl implements StarService {
 
             int brightness = luminosity.intValue();
 
+            // Explanation
+            String explanation = "";
+            if(starList.get(i).getSpectrum() > 4 && starList.get(i).getColour() == 0){
+                explanation = "Una enana blanca es el remanente que queda tras la muerte de una estrella poco masiva como nuestro Sol. Tras explotar en forma de nebulosa, el núcleo de la estrella se convierte en esta enana blanca.";
+            } else if (starList.get(i).getSpectrum() > 4) {
+                explanation = "Una estrella enana se encuentran en la fase principal de su evolución, desde que nacen hasta que se agota el hidrógeno en su núcleo";
+            } else if (starList.get(i).getSpectrum() <= 4) {
+                explanation = "Una estrella se convierte en una supergigante en sus últimas etapas de vida, al agotar casi todo el combustible y justo antes de explotar y formar una nebulosa planetaria o supernova";
+            }
+
             StarCuriousDTO starCuriousDTO = new StarCuriousDTO();
             starCuriousDTO.setSAO(starList.get(i).getSAO());
             starCuriousDTO.setStarName(starList.get(i).getStarName());
@@ -122,6 +133,8 @@ public class StarServiceImpl implements StarService {
             starCuriousDTO.setColour(color);
             starCuriousDTO.setImage(starList.get(i).getImage());
             starCuriousDTO.setDistance(starCoordinatesDTOList.get(i).getDistance());
+            starCuriousDTO.setExplanation(explanation);
+
 
             starCuriousDTOList.add(starCuriousDTO);
         }
@@ -216,6 +229,15 @@ public class StarServiceImpl implements StarService {
 
             int brightness = luminosity.intValue();
 
+            // Explanation
+            String explanation = "";
+            if(starList.get(i).getSpectrum() > 4 && starList.get(i).getColour() == 0){
+                explanation = "Una enana blanca es el remanente que queda tras la muerte de una estrella poco masiva como nuestro Sol. Tras explotar en forma de nebulosa, el núcleo de la estrella se convierte en esta enana blanca.";
+            } else if (starList.get(i).getSpectrum() > 4) {
+                explanation = "Una estrella enana se encuentran en la fase principal de su evolución, desde que nacen hasta que se agota el hidrógeno en su núcleo";
+            } else if (starList.get(i).getSpectrum() <= 4) {
+                explanation = "Una estrella se convierte en una supergigante en sus últimas etapas de vida, al agotar casi todo el combustible y justo antes de explotar y formar una nebulosa planetaria o supernova";
+            }
 
             StarCuriousDTO starCuriousDTO = new StarCuriousDTO();
 
@@ -225,15 +247,14 @@ public class StarServiceImpl implements StarService {
             starCuriousDTO.setConstellation(starList.get(i).getConstellation());
             starCuriousDTO.setConstellationId(starList.get(i).getConstellationId());
 
-            // falta color y brillo
-            //Voy a probar con valores inventados para ver si compila
+
             starCuriousDTO.setBrightness(brightness);
             starCuriousDTO.setType(type);
 
             starCuriousDTO.setColour(color);
             starCuriousDTO.setImage(starList.get(i).getImage());
-            // La distancia la cogemos del otro proxy mediante el client
-            starCuriousDTO.setDistance(starCoordinatesDTO.getDistance()); //Cambiar, inventado
+            starCuriousDTO.setDistance(starCoordinatesDTO.getDistance());
+            starCuriousDTO.setExplanation(explanation);
 
             starCuriousDTOList.add(starCuriousDTO);
         }
@@ -322,6 +343,15 @@ public class StarServiceImpl implements StarService {
 
         int brightness = luminosity.intValue();
 
+        // Explanation
+        String explanation = "";
+        if(optionalStar.get().getSpectrum() > 4 && optionalStar.get().getColour() == 0){
+            explanation = "Una enana blanca es el remanente que queda tras la muerte de una estrella poco masiva como nuestro Sol. Tras explotar en forma de nebulosa, el núcleo de la estrella se convierte en esta enana blanca.";
+        } else if (optionalStar.get().getSpectrum() > 4) {
+            explanation = "Una estrella enana se encuentran en la fase principal de su evolución, desde que nacen hasta que se agota el hidrógeno en su núcleo";
+        } else if (optionalStar.get().getSpectrum() <= 4) {
+            explanation = "Una estrella se convierte en una supergigante en sus últimas etapas de vida, al agotar casi todo el combustible y justo antes de explotar y formar una nebulosa planetaria o supernova";
+        }
 
         StarCuriousDTO starCuriousDTO = new StarCuriousDTO();
 
@@ -331,15 +361,14 @@ public class StarServiceImpl implements StarService {
              starCuriousDTO.setConstellation(optionalStar.get().getConstellation());
              starCuriousDTO.setConstellationId(optionalStar.get().getConstellationId());
 
-             // falta color y brillo
-             //Voy a probar con valores inventados para ver si compila
              starCuriousDTO.setBrightness(brightness);
              starCuriousDTO.setType(type);
 
              starCuriousDTO.setColour(color);
              starCuriousDTO.setImage(optionalStar.get().getImage());
              // La distancia la cogemos del otro proxy mediante el client
-             starCuriousDTO.setDistance(starCoordinatesDTO.getDistance()); //Cambiar, inventado
+             starCuriousDTO.setDistance(starCoordinatesDTO.getDistance());
+             starCuriousDTO.setExplanation(explanation);
 
 
         return starCuriousDTO;

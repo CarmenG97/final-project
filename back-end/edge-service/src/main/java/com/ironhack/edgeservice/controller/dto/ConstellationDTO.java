@@ -26,6 +26,7 @@ public class ConstellationDTO {
         this.history = history;
     }
 
+
     public String getHistory() {
         return history;
     }

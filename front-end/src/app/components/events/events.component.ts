@@ -18,6 +18,8 @@ export class EventsComponent implements OnInit {
 
   eventClicId: number;
 
+  eventList: Event[];
+
   backgroundColor: string ="rgb(180, 177, 177)";
   color: string = "white";
 
@@ -26,6 +28,7 @@ export class EventsComponent implements OnInit {
 
     this.amateurId = 0;
     this.eventClicId = 0;
+    this.eventList = [];
 
   }
 
@@ -56,15 +59,16 @@ export class EventsComponent implements OnInit {
      }
   }
 
-   participation(eventId: number): void {
+   participation(event: Event): void {
 
-      this.amateurAttendEvent = new AmateurAttentEvent(null, this.amateurId, eventId);
+      this.amateurAttendEvent = new AmateurAttentEvent(null, this.amateurId, event.id);
       console.log(this.amateurId);
 
       this.eventService.addEventToAmateur(this.amateurAttendEvent).subscribe(
        (response: any) => {
          console.log(response);
          this.eventClicId = response.eventId;
+         this.eventList.push(event);
        }
      );
 
