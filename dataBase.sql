@@ -251,7 +251,6 @@ CREATE TABLE role (
   FOREIGN KEY (amateur_id) REFERENCES amateur(id)
   );
 
-
 SELECT * FROM amateur;
 
 -- -------------------------------------------------- AHORA UTILIZO EL ESCHEMA DE LOS EVENTOS ---------------------------------------------------------------------------
@@ -277,6 +276,8 @@ INSERT INTO event(event_name, date, location, description, photo) VALUES
 ("Oposición de Saturno", "14 de agosto", "Madrid", "A las 17:02 UTC, Saturno se encuentra en su posición más cercana a la Tierra y su cara visible está completamente iluminada por el Sol a una magnitud de 0,3.
 Es más brillante que en cualquier otra época del año y es visible durante toda la noche.", "./assets/img/Saturno.png"),
 ("Luna Nueva", "27 de agosto", "Barcelona", "La Luna está entre la Tierra y el Sol, así que el lado brillante de la Luna está de espaldas a la Tierra. Además se verá sobre el centro galáctico de la Vía Láctea", "./assets/img/Luna_nueva.png");
+
+SELECT * FROM event;
 
 CREATE TABLE amateur_attend_event (
 	id BIGINT NOT NULL AUTO_INCREMENT,

@@ -10,8 +10,15 @@ export class Star {
         private _colour: string,
         private _distance: number,
         private _image: string,
+        private _explanation: string,
     ){}
 
+    public get explanation(): string {
+        return this._explanation;
+    }
+    public set explanation(value: string) {
+        this._explanation = value;
+    }
     public get constellationId(): number {
         return this._constellationId;
     }

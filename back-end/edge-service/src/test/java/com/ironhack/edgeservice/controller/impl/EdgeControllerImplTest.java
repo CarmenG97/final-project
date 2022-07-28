@@ -57,7 +57,7 @@ class EdgeControllerImplTest {
     @BeforeEach
     void setUp() {
         starDTO = new StarDTO(1l, "star", "ALPHA", "ARIES", 1, 1.1, 2.2, 5, 4.2, "", 1.0, 90, new BigDecimal("100"));
-        starCuriousDTO = new StarCuriousDTO(1l, "star", "ALPHA", "ARIES", 1, 3.3, "Supergigante", "rojo", "", new BigDecimal("22"));
+        starCuriousDTO = new StarCuriousDTO(1l, "star", "ALPHA", "ARIES", 1, 3.3, "Supergigante", "rojo", "", new BigDecimal("22"), "");
         constellationDTO = new ConstellationDTO(1l, "ARIES", "star", 5, List.of(starDTO), "", "", "");
         constellationCuriousDTO = new ConstellationCuriousDTO(1l, "ARIES", "star", 5, List.of(starCuriousDTO), "", "", "");
         amateurDTO = new AmateurDTO(1l, "amateur", "amateur@hotmail.com", 5, "123456", "");

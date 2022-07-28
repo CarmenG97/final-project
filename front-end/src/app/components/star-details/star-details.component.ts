@@ -31,7 +31,7 @@ export class StarDetailsComponent implements OnInit {
     this.starService.getStarBySAO(this.sao).subscribe(result => {
       let star: Star = new Star(
         result.sao, result.starName, result.starDesignation, result.constellation, result.constellationId, 
-        result.brightness, result.type, result.colour, result.distance, result.image);
+        result.brightness, result.type, result.colour, result.distance, result.image, result.explanation);
       this.selectedStar = star;
   }
   );

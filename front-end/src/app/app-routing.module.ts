@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AmateurDetailsComponent } from './components/amateur-details/amateur-details.component';
 import { AmateurRegisterComponent } from './components/amateur-register/amateur-register.component';
 import { AmateurComponent } from './components/amateur-login/amateur.component';
 import { ConstellationDetailsComponent } from './components/constellation-details/constellation-details.component';

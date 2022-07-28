@@ -114,11 +114,11 @@ public class StarServiceImpl implements StarService {
             // Explanation
             String explanation = "";
             if(starList.get(i).getSpectrum() > 4 && starList.get(i).getColour() == 0){
-                explanation = "Una enana blanca es el remanente que queda tras la muerte de una estrella poco masiva como nuestro Sol. Tras explotar en forma de nebulosa, el núcleo de la estrella se convierte en esta enana blanca.";
+                explanation = "Una enana blanca es el remanente que queda tras la muerte de una estrella poco masiva como nuestro Sol. Tras explotar en forma de nebulosa, el núcleo de la estrella se convierte en enana blanca.";
             } else if (starList.get(i).getSpectrum() > 4) {
                 explanation = "Una estrella enana se encuentran en la fase principal de su evolución, desde que nacen hasta que se agota el hidrógeno en su núcleo";
             } else if (starList.get(i).getSpectrum() <= 4) {
-                explanation = "Una estrella se convierte en una supergigante en sus últimas etapas de vida, al agotar casi todo el combustible y justo antes de explotar y formar una nebulosa planetaria o supernova";
+                explanation = "Una estrella se convierte en una supergigante en sus últimas etapas de vida, al agotar casi todo el combustible y justo antes de explotar y formar una nebulosa planetaria o Supernova";
             }
 
             StarCuriousDTO starCuriousDTO = new StarCuriousDTO();
@@ -128,7 +128,7 @@ public class StarServiceImpl implements StarService {
             starCuriousDTO.setConstellation(starList.get(i).getConstellation());
             starCuriousDTO.setConstellationId(starList.get(i).getConstellationId());
 
-            starCuriousDTO.setBrightness(brightness);  //Calcularlo!!
+            starCuriousDTO.setBrightness(brightness);
             starCuriousDTO.setType(type);
             starCuriousDTO.setColour(color);
             starCuriousDTO.setImage(starList.get(i).getImage());
